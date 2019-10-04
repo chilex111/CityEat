@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bck_color"
+              android:orientation="vertical"
+              tools:context=".fragments.AboutFragment">
+
+   <!-- <include layout="@layout/custom_header"
+    android:id="@+id/relativeHeader"/>-->
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#e2e2e2"
+          android:layout_marginTop="20dp"/>
+
+    <Button
+            android:id="@+id/btnPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@android:color/white"
+            android:text="@string/privacy_policy"
+            android:textAlignment="textStart"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:drawableEnd="@drawable/ic_arrow"/>
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#e2e2e2"/>
+    <Button
+            android:id="@+id/btnTerms"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@android:color/white"
+            android:text="@string/terms_of_use"
+            android:textAlignment="textStart"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:drawableEnd="@drawable/ic_arrow"/>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#e2e2e2"/>
+
+</LinearLayout>

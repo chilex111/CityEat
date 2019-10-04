@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/bck_color"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".fragments.AddReviewFragment">
+
+   <!-- <include layout="@layout/custom_header"
+             android:id="@+id/relativeHeader"/>-->
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardName"
+            android:layout_width="0dp"
+            android:layout_margin="6dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/relativeHeader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_margin="10dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark"
+                    android:text="Restaurant Name:"
+                    android:fontFamily="@font/poppins"/>
+            <EditText
+                    android:id="@+id/editName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="* Please rate this restaurant"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/dark"
+                    android:layout_marginTop="10dp"/>
+            <RatingBar android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       style="@style/Widget.AppCompat.RatingBar.Indicator"
+            />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardReview"
+            android:layout_width="0dp"
+            android:layout_margin="6dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cardName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:padding="5dp"
+                      android:layout_margin="10dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="* Please leave a review"
+                    android:textColor="@color/dark"
+                    android:fontFamily="@font/poppins"/>
+            <EditText
+                    android:id="@+id/editReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardPhotos"
+            android:layout_width="0dp"
+            android:layout_margin="6dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cardReview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp">
+        <LinearLayout android:layout_width="match_parent"
+                      android:padding="8dp"
+                      android:layout_margin="4dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Take a photo"
+                    android:textColor="@color/dark"
+                    android:fontFamily="@font/poppins"/>
+
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="100dp"
+                         android:orientation="vertical"
+                         android:padding="5dp"
+                         android:layout_margin="10dp">
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                <ImageButton
+                        android:id="@+id/imgPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_tap_to_add" android:contentDescription="@string/app_name"/>
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardMedia"
+            android:layout_width="0dp"
+            android:layout_margin="6dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cardPhotos"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                      android:padding="8dp"
+                      android:layout_margin="4dp"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Add an audio or video review"
+                    android:textColor="@color/dark"
+                    android:fontFamily="@font/poppins"/>
+
+            <FrameLayout
+                    android:id="@+id/frameAudio" android:layout_width="wrap_content"
+                         android:layout_height="100dp"
+                         android:orientation="vertical"
+                         android:padding="5dp"
+                         android:layout_below="@+id/txt"
+                         android:layout_margin="10dp">
+                <ImageButton
+                        android:id="@+id/btnAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_audio"
+                        android:contentDescription="@string/app_name"/>
+                <TextView
+                        android:id="@+id/txtAudioLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_width="wrap_content"
+                         android:layout_height="100dp"
+                         android:orientation="vertical"
+                         android:padding="5dp"
+                         android:layout_toEndOf="@+id/frameAudio"
+                         android:layout_below="@+id/txt"
+                         android:layout_margin="10dp">
+                <ImageButton
+                        android:id="@+id/btnVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_video"
+                        android:contentDescription="@string/app_name"/>
+                <TextView
+                        android:id="@+id/txtVideoLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </FrameLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

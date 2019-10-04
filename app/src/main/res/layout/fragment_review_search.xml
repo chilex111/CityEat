@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/bck_color"
+        tools:context=".fragments.ReviewSearchFragment">
+
+    <AutoCompleteTextView
+            android:id="@+id/editSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:elevation="8dp"
+            android:hint="@string/enter_restaurant_name"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="16sp"
+            android:background="@drawable/rectangle_white"/>
+
+    <LinearLayout
+            android:id="@+id/linearRecent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:layout_below="@id/editSearch"
+            android:orientation="vertical">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Recently viewed"
+                  android:fontFamily="@font/roboto"
+                  android:textSize="16sp"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+              android:background="@color/grey"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerRecent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/linearNothing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/editSearch"
+            android:visibility="gone"
+            android:layout_marginTop="20dp">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Nothing found for your request"
+                  android:fontFamily="@font/roboto"/>
+        <Button
+                android:id="@+id/btnAddRestaurant"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/add_a_restaurant"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/roboto"
+                android:background="@android:color/transparent"/>
+    </LinearLayout>
+</RelativeLayout>

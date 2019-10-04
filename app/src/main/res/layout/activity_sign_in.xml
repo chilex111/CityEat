@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0EDED"
+        tools:context=".activity.SignInActivity">
+
+    <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            android:padding="16dp"
+            android:background="@drawable/ic_background">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Enter your phone number"
+                  android:fontFamily="@font/poppins"
+                  android:textSize="18sp"
+                  android:textColor="@android:color/black"
+                  android:textStyle="bold"/>
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+        android:gravity="center">
+
+            <com.hbb20.CountryCodePicker
+                    android:id="@+id/codePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:ccp_defaultNameCode="NG"
+                    app:ccp_showFlag="false"/>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/codePicker"
+                    android:layout_alignParentEnd="true"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    app:errorEnabled="true">
+
+                <EditText
+                        android:id="@+id/editPhone"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins"
+                        android:layout_height="56dp"
+                        android:maxLength="10"
+                        android:textSize="14sp"
+                        android:inputType="phone"
+                        android:hint="Enter your phone number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="112dp"
+                android:layout_height="36dp"
+                android:text="@string/sign_in"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/poppins"
+                android:background="@color/colorAccent"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:text="You can sign in with"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear"
+            android:textColor="@color/dark"/>
+
+    <LinearLayout
+            android:id="@+id/linearSocial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt1">
+
+        <ImageButton
+                android:id="@+id/btnFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"/>
+        <ImageButton
+                android:id="@+id/btnTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_twitter"
+                android:layout_marginStart="20dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"/>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/linearSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:elevation="8dp"
+            app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintTop_toBottomOf="@+id/linear"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="@font/poppins"
+                  android:textColor="@android:color/black"
+                  android:text="Don't have an account?"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/sign_up"
+                  android:textStyle="bold"
+                  android:fontFamily="@font/poppins"
+                  android:textColor="@color/colorAccent"
+                  android:textAllCaps="true"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

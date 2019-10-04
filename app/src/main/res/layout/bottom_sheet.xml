@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/ic_ellipse"
+                android:padding="16dp"
+                app:behavior_hideable="true"
+                android:id="@+id/bottom_sheet"
+                app:behavior_peekHeight="1dp"
+                android:gravity="center"
+                style="@style/BottomSheetDialogTheme"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <Button
+            android:id="@+id/btnAddReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_plus_white"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:text="@string/add_a_review"/>
+
+    <Button
+            android:id="@+id/btnAddRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_plus_white"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_below="@id/btnAddReview"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:drawablePadding="10dp"
+            android:text="@string/add_a_restaurant"/>
+</RelativeLayout>

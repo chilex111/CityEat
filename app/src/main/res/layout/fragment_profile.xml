@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@color/bck_color"
+        tools:context=".fragments.ProfileFragment">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+            <RelativeLayout
+                    android:id="@+id/relativeProfileHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="1dp"
+                    android:padding="10dp">
+
+                <com.innovantics.cityeats.views.CircleImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@mipmap/img"/>
+                <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Andrew Donaldson"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:layout_toEndOf="@id/imgProfile"/>
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"/>
+            </RelativeLayout>
+
+            <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:background="@color/dark"
+                    android:layout_below="@+id/relativeProfileHead"/>
+            <LinearLayout
+                    android:id="@+id/linearPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_below="@+id/view">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/phone_number"
+                          android:fontFamily="@font/roboto"
+                          android:textStyle="bold"
+                          android:textSize="16sp"/>
+
+                <TextView
+                        android:id="@+id/txtPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="+234094580850"
+                        android:fontFamily="@font/roboto"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+            </LinearLayout>
+            <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:background="@color/dark"
+                    android:layout_below="@+id/linearPhone"/>
+
+            <RelativeLayout
+                    android:id="@+id/relativePoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/view1"
+                    android:padding="10dp">
+
+                <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_points"/>
+                <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/roboto"
+                        tools:text="40 CityEats point on your account"
+                        android:textSize="14sp"
+                        android:layout_toEndOf="@id/img"/>
+
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ccp_down_arrow"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.31"/>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardMyRestaurant"
+            android:layout_width="0dp"
+            android:elevation="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guide"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/view1"
+                android:padding="10dp">
+
+            <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_restaurant_"
+                    android:contentDescription="@string/app_name"/>
+            <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/my_restaurants"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@id/img1"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardAbout"
+            android:layout_width="0dp"
+            android:elevation="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cardMyRestaurant"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/view1"
+                android:padding="10dp">
+
+            <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_about"
+                    android:contentDescription="@string/app_name"/>
+            <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/about"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@id/img2"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+            android:id="@+id/btnFeedBack"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardAbout"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_feedback"
+            android:text="@string/send_feedback"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="textStart"
+            android:drawablePadding="30dp"
+            android:textColor="@color/colorAccent"/>
+
+    <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnFeedBack"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_logout"
+            android:text="@string/log_out"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="textStart"
+            android:drawablePadding="30dp"
+            android:textColor="@color/colorAccent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

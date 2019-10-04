@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+
+
+    <fragment
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/mapfragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <EditText
+        android:id="@+id/query"
+        android:queryHint="Enter restaurant location"
+        android:layout_margin="10dp"
+        android:queryBackground="@android:color/white"
+        android:background="@android:color/white"
+        android:layout_height="56dp"
+        android:drawableStart="@drawable/ic_search_grey"
+        android:layout_width="match_parent"
+        android:inputType="text"/>
+
+</RelativeLayout>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/bck_color"
+        tools:ignore="HardcodedText"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".fragments.RestaurantDetailFragment">
+    <ImageView
+            android:id="@+id/imgRestaurant"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/img"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/guide"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"/>
+
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRestaurantDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="142dp"
+                    android:elevation="4dp"
+                    android:layout_margin="2dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+                    <TextView
+                            android:id="@+id/txtName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/circle_yellow"
+                            android:drawablePadding="15dp"
+                            android:textSize="17sp"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark"
+                            android:text="Underground Tea Room"/>
+
+                    <TextView
+                            android:id="@+id/txtRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtName"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:layout_marginStart="10dp"
+                            android:drawableEnd="@drawable/ic_star"
+                            android:textStyle="bold"
+                            android:textColor="@color/yellow_color"
+                            android:text="4.5"/>
+                    <TextView
+                            android:id="@+id/txtRatingCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtName"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:layout_toEndOf="@+id/txtRating"
+                            android:layout_marginStart="15dp"
+                            android:textStyle="bold"
+                            android:text="123 reviews"/>
+
+                    <TextView
+                            android:id="@+id/txtCuisine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="International, European, Vegan options"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@id/txtRatingCount"
+                            android:layout_toStartOf="@+id/txtPricing"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="15dp"
+                            android:layout_alignParentBottom="true"/>
+                    <ImageView
+                            android:id="@+id/txtPricing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_low_price"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRestaurantInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardRestaurantDetail">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:padding="10dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/circle_yellow"
+                            android:drawablePadding="15dp"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark"
+                            android:text="Restaurant information"/>
+
+                    <TextView
+                            android:id="@+id/txtPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:textStyle="bold"
+                            android:text="+234810009900"
+                            android:drawablePadding="10dp"/>
+                    <TextView
+                            android:id="@+id/txtAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:drawableStart="@drawable/ic_location"
+                            android:drawablePadding="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="12 Oduduwa way"/>
+
+                    <TextView
+                            android:id="@+id/txtSite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="www.website.my.restaurant"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:drawableStart="@drawable/ic_laptop"
+                            android:drawablePadding="10dp"/>
+                    <TextView
+                            android:id="@+id/txtOpens"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableStart="@drawable/ic_watch_later"
+                            android:text="Thu 8:00 am - 10.00pm"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="10dp"/>
+                    <ToggleButton
+                            android:id="@+id/btnOpen"
+                            android:layout_width="15dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="end"
+                            android:background="@drawable/expands_btn"
+                            android:checked="false"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn=""/>
+                    <LinearLayout
+                            android:id="@+id/linearOpens"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                        <View android:layout_width="match_parent"
+                              android:layout_height="1dp"
+                              android:background="#e2e2e2"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerOpen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPhotos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardRestaurantInfo">
+                <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:padding="10dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/circle_yellow"
+                            android:drawablePadding="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:layout_toStartOf="@+id/txtShow"
+                            android:textColor="@color/dark"
+                            android:text="Photos"/>
+                    <TextView
+                            android:id="@+id/txtShow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:layout_alignParentEnd="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="@string/show_all"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/txtShow"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:layout_height="100dp"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:drawableStart="@drawable/ic_add_photo"
+                              android:layout_below="@+id/recyclerPhoto"
+                              android:text="Add Photo"
+                              android:textColor="@color/colorAccent"
+                              android:drawablePadding="10dp"
+                              android:textAllCaps="true"
+                              android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/cardReview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardPhotos">
+                <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:padding="10dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/circle_yellow"
+                            android:drawablePadding="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/poppins"
+                            android:textStyle="bold"
+                            android:layout_toStartOf="@+id/txtShowReviews"
+                            android:textColor="@color/dark"
+                            android:text="Reviews"/>
+                    <TextView
+                            android:id="@+id/txtShowReviews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:layout_alignParentEnd="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="@string/show_all"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerReview"
+                            android:layout_width="match_parent"
+                            android:layout_below="@+id/txtShowReviews"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:id="@+id/txtWriteReview" android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:drawableStart="@drawable/ic_edit"
+                              android:layout_below="@+id/recyclerReview"
+                              android:text="Write a Review"
+                              android:textColor="@color/colorAccent"
+                              android:drawablePadding="10dp"
+                              android:textAllCaps="true"
+                              android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+    <FrameLayout
+            android:id="@+id/container" android:layout_width="0dp" android:layout_height="0dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

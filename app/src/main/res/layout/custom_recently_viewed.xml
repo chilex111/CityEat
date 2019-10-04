@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+    <ImageView
+            android:id="@+id/recentImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_rounded"
+            android:src="@mipmap/img"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"/>
+
+    <TextView
+            android:id="@+id/txtName" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/recentImg"
+            android:text="Underground Tearoom"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"/>
+
+    <TextView
+            android:id="@+id/txtStreet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/recentImg"
+            android:layout_below="@+id/txtName"
+            android:text="Lagos, Oduwadu St"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"/>
+    <View
+            android:layout_width="match_parent" android:layout_height="0.7dp"
+            android:background="@color/dark_grey"
+            android:layout_below="@id/recentImg"
+            android:layout_marginTop="10dp"/>
+    <Button
+            android:id="@+id/btnReview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_margin="3dp"/>
+</RelativeLayout>

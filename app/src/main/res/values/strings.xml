@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">CityEats</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email">Email</string>
+    <string name="pick_a_date">pick a date</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="new_review">New review</string>
+    <string name="my_profile">My profile</string>
+    <string name="go_to_filters">Go to filters</string>
+    <string name="show_all_places">Show all places</string>
+    <string name="open">open</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="filter">Filter</string>
+    <string name="clear">Clear</string>
+    <string name="open_now">Open now</string>
+    <string name="apply_filters">Apply filters</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="continue1">Continue</string>
+    <string name="enter_your_first_name">Enter your first name</string>
+    <string name="add_your_profile_picture">Add your profile picture</string>
+    <string name="you_can_use_your_social_media_accounts_for_registration_or_do_it_manually">You can use your, social
+        media accounts for registration or do it manually
+    </string>
+    <string name="sign_up_with_your_social_media_accounts">Sign up with your social media accounts</string>
+    <string name="enter_your_last_name">Enter your last name</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="pick_your_date_of_birth">Pick your date of birth</string>
+    <string name="not_chosen">Not chosen</string>
+    <string name="cuisine_type">Cuisine type</string>
+    <string name="dietary_restrictions">Dietary restrictions</string>
+    <string name="establishment_type">Establishment type</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="show_all">Show All</string>
+    <string name="reviews">Reviews</string>
+    <string name="add_a_review">Add a review</string>
+    <string name="ok">OK</string>
+    <string name="choose_a_place">Choose a place</string>
+    <string name="phone_number">Phone number</string>
+    <string name="about">About</string>
+    <string name="my_restaurants">My restaurants</string>
+    <string name="send_feedback">Send FeedBack</string>
+    <string name="birth_date">Birth date</string>
+    <string name="save">Save</string>
+    <string name="edit_profile_info">Edit your profile info</string>
+    <string name="your_email">Your Email</string>
+    <string name="log_out">Log out</string>
+    <string name="send">Send</string>
+    <string name="terms_of_use">Terms of use</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="enter_restaurant_name">Enter restaurant name</string>
+    <string name="add_a_restaurant">Add a restaurant</string>
+</resources>

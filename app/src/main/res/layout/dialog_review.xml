@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_margin="4dp"
+        tools:ignore="HardcodedText"
+        android:layout_height="wrap_content">
+
+    <com.innovantics.cityeats.views.CircleImageView
+            android:id="@+id/imgReviewer"
+            android:layout_width="60dp"
+            android:background="@drawable/ic_add_photo_profile"
+            android:layout_height="60dp"/>
+    <TextView
+            android:id="@+id/txtReviewerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/imgReviewer"
+            android:text="Ali Muhammed"/>
+    <TextView
+            android:id="@+id/txtReviewerRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins"
+            android:layout_below="@id/txtReviewerName"
+            android:layout_toEndOf="@id/imgReviewer"
+            android:text="4"
+            android:drawableEnd="@drawable/ic_star"
+            android:textColor="@color/yellow_color"
+            android:drawablePadding="5dp" />
+    <TextView
+            android:id="@+id/txtReviewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins"
+            android:layout_below="@id/txtReviewerName"
+            android:layout_toEndOf="@id/txtReviewerRate"
+            android:text="May 12,2019" />
+    <TextView
+            android:id="@+id/txtReviewMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:layout_below="@id/imgReviewer"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali qua. Ut enim ad minim veniam, quis nostrud exercitation ull amco laboris nisi ut aliquip ex ea commodo consequat. Dui s aute irure dolor in reprehenderit in voluptate velit esse cill um dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mo llit anim id est laborum Lorem ipsum dolor sit amet sit amet " />
+
+    <TextView
+            android:id="@+id/txtShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/txtReviewMsg"
+            android:textColor="@color/colorAccent"
+            android:text="See review"/>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#e2e2e2"
+          android:layout_below="@+id/txtShow"
+          android:layout_marginTop="10dp"
+    />
+</RelativeLayout>

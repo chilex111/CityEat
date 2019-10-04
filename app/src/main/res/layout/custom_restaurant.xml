@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        android:elevation="8dp"
+        tools:ignore="HardcodedText"
+        app:cardBackgroundColor="@android:color/white">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp">
+
+        <ImageView
+                android:id="@+id/imgRestaurant"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/resturant"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"/>
+
+        <Button
+                android:id="@+id/btnOpen"
+                android:layout_width="45dp"
+                android:layout_height="16dp"
+                android:text="@string/open"
+                android:fontFamily="@font/poppins"
+                android:textSize="12sp"
+                android:layout_margin="8dp"
+                android:background="@android:color/white"/>
+
+        <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imgRestaurant"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/dark"
+                android:text="Underground Tea Room"/>
+
+        <TextView
+                android:id="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtName"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:layout_toEndOf="@+id/imgRestaurant"
+                android:layout_marginStart="10dp"
+                android:drawableEnd="@drawable/ic_star"
+                android:textStyle="bold"
+                android:textColor="@color/yellow_color"
+                android:text="4.5"/>
+        <TextView
+                android:id="@+id/txtRatingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtName"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:layout_toEndOf="@+id/txtRating"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:text="123 reviews"/>
+
+        <ImageView
+                android:id="@+id/txtPricing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRating"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/imgRestaurant"
+                android:src="@drawable/ic_low_price"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/yellow_color"
+                android:text="4.5"
+                android:contentDescription="@string/app_name"/>
+
+        <TextView
+                android:id="@+id/txtDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRating"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins"
+                android:layout_toEndOf="@+id/txtPricing"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:text="1.5 km"/>
+        <TextView
+                android:id="@+id/txtCuisine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDistance"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/circle_navy"
+                android:drawablePadding="6dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins"
+                android:layout_toEndOf="@+id/imgRestaurant"
+                android:layout_marginStart="10dp"
+                android:text="European" />
+
+        <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+            <ToggleButton
+                    android:id="@+id/btnFav"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/favourite_btn"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""/>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
